@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Profile Page{% endblock %}
+
+{% block content %}
+
+<h1>Profile Page</h1>
+<img class="profile-pic" src="{{ user.profile_picture.url }}"
+     alt="Profile picture" width="200" height="200"><br>
+
+<div>
+     <a href="{% url 'users:profile-edit' %}">edit profile</a>
+</div><br>
+
+
+
+<p>Username: {{ user.username }}</p>
+<p>First Name: {{ user.first_name }}</p>
+<p>Last Name: {{ user.last_name }}</p>
+<p>Email: {{ user.email }}</p>
+
+{% endblock %}
