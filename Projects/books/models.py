@@ -9,6 +9,10 @@ class Book(models.Model):
     description = models.TextField()
     isbn = models.IntegerField()
     created_at = models.TimeField(auto_now_add=True)
+    cover_picture = models.ImageField(default="emodji.jpg")
+
+
+
 
     def __str__(self):
         return self.title

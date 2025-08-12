@@ -4,16 +4,18 @@
 
 
 {% block content %}
-    <h1>
-        Book Detail Page
-    </h1>
+<div class="row">
+    <div class="col-2">
+        <img class="cover-pic img-fluid"
+             alt="cover image"
+             src="{{ book.cover_picture.url }}"
+             width="150" height="220">
+    </div>
 
-    <h3>
-        {{ book.title }}
-    </h3>
-
-    <p>
-        {{ book.description }}
-    </p>
-    
+    <div class="col-6">
+        <h3>{{ book.title }}</h3>
+        <p>{{ book.description }}</p>
+    </div>
+</div>
 {% endblock %}
+
